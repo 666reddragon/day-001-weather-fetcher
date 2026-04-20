@@ -10,15 +10,14 @@ def get_weather(city_name, api_key):
     """Fetch current weather for a given city"""
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     params = {
-        "q": city_name,      # ← Fixed: 'q' not empty string
+        "q": city_name,
         "appid": api_key,
         "units": "metric"
     }
-    
     try:
         response = requests.get(base_url, params=params)
         data = response.json()
-        
+
         if response.status_code == 200:
             temp = data["main"]["temp"]
             feels_like = data["main"]["feels_like"]
