@@ -36,6 +36,6 @@ def get_weather(city_name, api_key):
 
 # Usage
 if __name__ == "__main__":
-    API_KEY = "your_api_key_here"  # Get free key from https://openweathermap.org/api
+    API_KEY = "96b0f29d8c6a76aa8c560069cb8c0545"  # Get free key from https://openweathermap.org/api
     city = input("Enter city name: ")
     get_weather(city, API_KEY)
